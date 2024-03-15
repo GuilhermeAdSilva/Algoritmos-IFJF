@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1710538461 source:c:\users\legep\desktop\bsi\1º semestre\algoritmos\algoritmos-ifjf\algoritmos-ifjf\cap03ex007\main.c
+	<stdio.h>
+	<stdlib.h>
+	<locale.h>
+

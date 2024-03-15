@@ -2,19 +2,20 @@
 #include <stdlib.h>
 #include <time.h>
 
-void numeroAleatorio(int n);
+int numeroAleatorio(int num);
 
 int main()
 {
-    int x;
+    int valorMaximo, numeroGerado;
     printf("Defina o valor maximo: ");
-    scanf("%d", &x);
-    numeroAleatorio(x);
+    scanf("%d", &valorMaximo);
+    numeroGerado = numeroAleatorio(valorMaximo);
+    printf("Numero aleatorio entre 1 e %d: %d", valorMaximo, numeroGerado);
     return 0;
 }
 
-void numeroAleatorio(int n){
+int numeroAleatorio(int num){
     srand(time(NULL));
-    int aleatorio = 1+(rand()%n);
-    printf("Numero aleatorio entre 1 e %d: %d", n, aleatorio);
+    int aleatorio = 1+(rand()%num);
+    return aleatorio;
 }
