@@ -34,8 +34,7 @@ int main()
 }
 
 int classificaTriangulo (float x, float y, float z){
-    if((x+y < z) || (x+z < y) || (y+z < x) || (x <= 0) || (y <= 0) || (z <= 0))
-        {
+    if((x+y < z) || (x+z < y) || (y+z < x) || (x <= 0) || (y <= 0) || (z <= 0)){
         return 0;
     } else{
         if((x == y) && (x == z)){
