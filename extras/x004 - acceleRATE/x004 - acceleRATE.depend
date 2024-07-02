@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1713503052 source:c:\users\legep\documents\bsi\1º semestre\algoritmos\algoritmos-ifjf\algoritmos-ifjf\extras\x004 - accelerate\main.c
+	<stdio.h>
+	<stdlib.h>
+	<locale.h>
+
