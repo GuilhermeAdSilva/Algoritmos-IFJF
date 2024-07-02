@@ -4,27 +4,27 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void pa (int primeiro_termo, int razao, int n);
+int pa (int primeiro_termo, int razao, int n);
 
 int main()
 {
-    int primeiro_termo, razao, n;
+    int primeiro_termo, razao, n, soma;
     printf("Primeiro termo: ");
     scanf("%d", &primeiro_termo);
     printf("Razao: ");
     scanf("%d", &razao);
     printf("Quantidade de termos: ");
     scanf("%d", &n);
-    pa (primeiro_termo, razao, n);
+    soma = pa (primeiro_termo, razao, n);
+    printf("A soma dos %d primeiros termos da PA e: %d", n, soma);
     getch();
     return 0;
 }
 
-void pa (int primeiro_termo, int razao, int n){
+int pa (int primeiro_termo, int razao, int n){
     int soma = 0;
     for (int i=0; i < n; i++){
         soma = soma + primeiro_termo + (razao*i);
     }
-    printf("A soma dos %d primeiros termos da PA e: %d", n, soma);
-    return;
+    return soma;
 }
