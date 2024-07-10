@@ -1,43 +1,36 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int fibonacci (int n);
+int sequenciaFibonacci (int termo);
 
 int main()
 {
-    int n, fib;
-    printf("Valor de n: ");
-    scanf("%d", &n);
-    fib = fibonacci(n);
-    printf("O valor do termo %d na sequencia de Fibonacci e: %d", n, fib);
+    printf("%d\n", sequenciaFibonacci(0));
+    printf("%d\n", sequenciaFibonacci(1));
+    printf("%d\n", sequenciaFibonacci(2));
+    printf("%d\n", sequenciaFibonacci(3));
+    printf("%d\n", sequenciaFibonacci(4));
+    printf("%d\n", sequenciaFibonacci(5));
+    printf("%d\n", sequenciaFibonacci(6));
+    printf("%d\n", sequenciaFibonacci(7));
+    printf("%d\n", sequenciaFibonacci(8));
+    printf("%d\n", sequenciaFibonacci(9));
     return 0;
 }
 
-int fibonacci (int n)
+int sequenciaFibonacci (int termo)
 {
-    int a = 0, b = 1, resultado;
-    if (n == 0)
+    int n1 = 0, n2 = 1, valor = 1, contador = 1;
+    if (termo == 0)
     {
-        return a;
+        return 0;
     }
-    else if (n == 1)
+    while (contador < termo)
     {
-        return b;
+        valor = n1 + n2;
+        n1 = n2;
+        n2 = valor;
+        contador++;
     }
-    else
-    {
-        for (int i=1; i<n; i++)
-        {
-            resultado = a+b;
-            if (i%2 == 0)
-            {
-                b = resultado;
-            }
-            else
-            {
-                a = resultado;
-            }
-        }
-        return resultado;
-    }
+    return valor;
 }
